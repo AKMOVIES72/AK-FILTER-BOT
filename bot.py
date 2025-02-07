@@ -1,6 +1,6 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit @Akmovietelugu
+# Subscribe YouTube Channel For Amazing Bot @Akmovietelugu
+# Ask Doubt on telegram @AravindAkhil
 
 # Clone Code Credit : YT - @Tech_VJ / TG - @VJ_Bots / GitHub - @VJBots
 
@@ -49,14 +49,14 @@ async def start():
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
-            print("Tech VJ Imported => " + plugin_name)
+            print("Tech Ak Imported => " + plugin_name)
     if ON_HEROKU:
         asyncio.create_task(ping_server())
     b_users, b_chats = await db.get_banned()
     temp.BANNED_USERS = b_users
     temp.BANNED_CHATS = b_chats
-    me = await TechVJBot.get_me()
-    temp.BOT = TechVJBot
+    me = await Akmovietelugu.get_me()
+    temp.BOT = Akmovietelugu
     temp.ME = me.id
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
@@ -66,17 +66,17 @@ async def start():
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
     try:
-        await TechVJBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+        await Akmovietelugu.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
     except:
         print("Make Your Bot Admin In Log Channel With Full Rights")
     for ch in CHANNELS:
         try:
-            k = await TechVJBot.send_message(chat_id=ch, text="**Bot Restarted**")
+            k = await Akmovietelugu.send_message(chat_id=ch, text="**Bot Restarted**")
             await k.delete()
         except:
             print("Make Your Bot Admin In File Channels With Full Rights")
     try:
-        k = await TechVJBot.send_message(chat_id=AUTH_CHANNEL, text="**Bot Restarted**")
+        k = await Akmovietelugu.send_message(chat_id=AUTH_CHANNEL, text="**Bot Restarted**")
         await k.delete()
     except:
         print("Make Your Bot Admin In Force Subscribe Channel With Full Rights")
